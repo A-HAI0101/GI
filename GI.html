@@ -1,0 +1,1371 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="generator" content="PhpSpreadsheet, https://github.com/PHPOffice/PhpSpreadsheet">
+      <meta name="author" content="Superman" />
+      <meta name="company" content="Microsoft Corporation" />
+    <style type="text/css">
+      html { font-family:Calibri, Arial, Helvetica, sans-serif; font-size:11pt; background-color:white }
+      a.comment-indicator:hover + div.comment { background:#ffd; position:absolute; display:block; border:1px solid black; padding:0.5em }
+      a.comment-indicator { background:red; display:inline-block; border:1px solid black; width:0.5em; height:0.5em }
+      div.comment { display:none }
+      table { border-collapse:collapse; page-break-after:always }
+      .gridlines td { border:1px dotted black }
+      .gridlines th { border:1px dotted black }
+      .b { text-align:center }
+      .e { text-align:center }
+      .f { text-align:right }
+      .inlineStr { text-align:left }
+      .n { text-align:right }
+      .s { text-align:left }
+      td.style0 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:white }
+      th.style0 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:white }
+      td.style1 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:white }
+      th.style1 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:white }
+      td.style2 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:#FFFF00 }
+      th.style2 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:#FFFF00 }
+      td.style3 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:#FFFF00 }
+      th.style3 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:#FFFF00 }
+      td.style4 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:#FABF8F }
+      th.style4 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:#FABF8F }
+      td.style5 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:#FABF8F }
+      th.style5 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:#FABF8F }
+      td.style6 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:#FBD4B4 }
+      th.style6 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:#FBD4B4 }
+      td.style7 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:#FBD4B4 }
+      th.style7 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:#FBD4B4 }
+      td.style8 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:#FFFFFF }
+      th.style8 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:#FFFFFF }
+      td.style9 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:#FFFFFF }
+      th.style9 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:#FFFFFF }
+      td.style10 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:#D6E3BC }
+      th.style10 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:#D6E3BC }
+      td.style11 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:#D6E3BC }
+      th.style11 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:#D6E3BC }
+      td.style12 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#FF0000; font-family:'新細明體'; font-size:12pt; background-color:white }
+      th.style12 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#FF0000; font-family:'新細明體'; font-size:12pt; background-color:white }
+      td.style13 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#FF0000; font-family:'新細明體'; font-size:12pt; background-color:#FFFFFF }
+      th.style13 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#FF0000; font-family:'新細明體'; font-size:12pt; background-color:#FFFFFF }
+      td.style14 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#FF0000; font-family:'新細明體'; font-size:12pt; background-color:#FFFFFF }
+      th.style14 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#FF0000; font-family:'新細明體'; font-size:12pt; background-color:#FFFFFF }
+      td.style15 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#FF0000; font-family:'新細明體'; font-size:12pt; background-color:white }
+      th.style15 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#FF0000; font-family:'新細明體'; font-size:12pt; background-color:white }
+      td.style16 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#FF0000; font-family:'新細明體'; font-size:12pt; background-color:white }
+      th.style16 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#FF0000; font-family:'新細明體'; font-size:12pt; background-color:white }
+      td.style17 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:white }
+      th.style17 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:white }
+      td.style18 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:white }
+      th.style18 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:white }
+      td.style19 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#7030A0; font-family:'新細明體'; font-size:12pt; background-color:white }
+      th.style19 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#7030A0; font-family:'新細明體'; font-size:12pt; background-color:white }
+      td.style20 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#7030A0; font-family:'新細明體'; font-size:12pt; background-color:white }
+      th.style20 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#7030A0; font-family:'新細明體'; font-size:12pt; background-color:white }
+      td.style21 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#7030A0; font-family:'新細明體'; font-size:12pt; background-color:white }
+      th.style21 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#7030A0; font-family:'新細明體'; font-size:12pt; background-color:white }
+      td.style22 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:#FFFFFF }
+      th.style22 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:#FFFFFF }
+      td.style23 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:white }
+      th.style23 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:white }
+      td.style24 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#FF0000; font-family:'新細明體'; font-size:12pt; background-color:white }
+      th.style24 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#FF0000; font-family:'新細明體'; font-size:12pt; background-color:white }
+      td.style25 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:#FFFFFF }
+      th.style25 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:#FFFFFF }
+      td.style26 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:#B6DDE8 }
+      th.style26 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'新細明體'; font-size:12pt; background-color:#B6DDE8 }
+      table.sheet0 col.col0 { width:149.1111094pt }
+      table.sheet0 col.col1 { width:46.76666613pt }
+      table.sheet0 col.col2 { width:313.13332974pt }
+      table.sheet0 tr { height:16.363636363636pt }
+      table.sheet0 tr.row22 { height:16.363636363636pt }
+      table.sheet0 tr.row117 { height:16.363636363636pt }
+      table.sheet0 tr.row118 { height:16.363636363636pt }
+    </style>
+  </head>
+
+  <body>
+<style>
+@page { margin-left: 0.7in; margin-right: 0.7in; margin-top: 0.75in; margin-bottom: 0.75in; }
+body { margin-left: 0.7in; margin-right: 0.7in; margin-top: 0.75in; margin-bottom: 0.75in; }
+</style>
+    
+<script src="index.js"></script>
+
+<head>  
+  <title>GI 值搜尋</title>
+  <h1 style="font-size:70px">在下方輸入關鍵字</h1>
+</head>
+
+<input type="search" style='font-size: 70px;' class="light-table-filter" data-table="order-table" placeholder="請輸入關鍵字">
+
+	
+	
+	<table class="order-table" border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0 gridlines">
+        <col class="col0">
+        <col class="col1">
+        <col class="col2">
+        <tbody>
+          <tr class="row0">
+            <td class="column0 style0 s">食物</td>
+            <td class="column1 style1 s">GI值</td>
+            <td class="column2 style0 s">飲食建議</td>
+          </tr>
+          <tr class="row1">
+            <td class="column0 style26 s">五穀類</td>
+            <td class="column1 style16 null"></td>
+            <td class="column2 style12 null"></td>
+          </tr>
+          <tr class="row2">
+            <td class="column0 style0 s">燕麥</td>
+            <td class="column1 style1 n">54</td>
+            <td class="column2 style0 s">挑選低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row3">
+            <td class="column0 style0 s">蕎麥</td>
+            <td class="column1 style1 n">54</td>
+            <td class="column2 style0 s">挑選低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row4">
+            <td class="column0 style0 s">糙米</td>
+            <td class="column1 style1 n">54</td>
+            <td class="column2 style0 s">挑選低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row5">
+            <td class="column0 style0 s">小麥</td>
+            <td class="column1 style1 n">41</td>
+            <td class="column2 style0 s">挑選低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row6">
+            <td class="column0 style0 s">大麥</td>
+            <td class="column1 style1 n">22</td>
+            <td class="column2 style0 s">挑選低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row7">
+            <td class="column0 style0 s">麥麩</td>
+            <td class="column1 style1 n">24</td>
+            <td class="column2 style0 s">加入主好的米飯,湯,粥或飲料中,增加營養</td>
+          </tr>
+          <tr class="row8">
+            <td class="column0 style0 s">米麩(米糠)</td>
+            <td class="column1 style1 n">18</td>
+            <td class="column2 style0 s">加入主好的米飯,湯,粥或飲料中,增加營養</td>
+          </tr>
+          <tr class="row9">
+            <td class="column0 style0 s">薏仁</td>
+            <td class="column1 style1 n">29</td>
+            <td class="column2 style0 s">低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row10">
+            <td class="column0 style0 s">即食燕麥</td>
+            <td class="column1 style1 n">66</td>
+            <td class="column2 style0 s">挑選全榖粒營養成分較高</td>
+          </tr>
+          <tr class="row11">
+            <td class="column0 style13 s">白米飯</td>
+            <td class="column1 style14 s">85+</td>
+            <td class="column2 style15 s">應挑選低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row12">
+            <td class="column0 style13 s">胚芽米飯</td>
+            <td class="column1 style14 n">70</td>
+            <td class="column2 style15 s">應挑選低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row13">
+            <td class="column0 style13 s">白米稀飯</td>
+            <td class="column1 style14 n">86</td>
+            <td class="column2 style15 s">應挑選低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row14">
+            <td class="column0 style13 s">糙米稀飯</td>
+            <td class="column1 style14 n">72</td>
+            <td class="column2 style15 s">應挑選低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row15">
+            <td class="column0 style13 s">白糯米飯</td>
+            <td class="column1 style14 n">99</td>
+            <td class="column2 style15 s">應挑選低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row16">
+            <td class="column0 style13 s">米漿</td>
+            <td class="column1 style14 s">85+</td>
+            <td class="column2 style12 s">糖份高,不可多吃</td>
+          </tr>
+          <tr class="row17">
+            <td class="column0 style13 s">炸馬鈴薯條</td>
+            <td class="column1 style14 s">70Δ+</td>
+            <td class="column2 style12 s">油炸物,不可多吃</td>
+          </tr>
+          <tr class="row18">
+            <td class="column0 style13 s">馬鈴薯泥</td>
+            <td class="column1 style14 s">90+</td>
+            <td class="column2 style12 s">油炸物,不可多吃</td>
+          </tr>
+          <tr class="row19">
+            <td class="column0 style13 s">八寶糯米飯</td>
+            <td class="column1 style14 s">85+</td>
+            <td class="column2 style12 s">不可多吃</td>
+          </tr>
+          <tr class="row20">
+            <td class="column0 style13 s">八寶糯米粥</td>
+            <td class="column1 style14 s">80+</td>
+            <td class="column2 style12 s">不可多吃</td>
+          </tr>
+          <tr class="row21">
+            <td class="column0 style13 s">鹹糯米粽</td>
+            <td class="column1 style14 s">85+</td>
+            <td class="column2 style12 s">不可多吃</td>
+          </tr>
+          <tr class="row22">
+            <td class="column0 style13 s">糯米磨粉製成的食物</td>
+            <td class="column1 style14 n">92</td>
+            <td class="column2 style12 s">不可多吃</td>
+          </tr>
+          <tr class="row23">
+            <td class="column0 style13 s">麻糬</td>
+            <td class="column1 style14 n">90</td>
+            <td class="column2 style12 s">不可多吃</td>
+          </tr>
+          <tr class="row24">
+            <td class="column0 style13 s">湯圓</td>
+            <td class="column1 style14 s">95+</td>
+            <td class="column2 style12 s">不可多吃</td>
+          </tr>
+          <tr class="row25">
+            <td class="column0 style26 s">麵食類</td>
+            <td class="column1 style16 null"></td>
+            <td class="column2 style12 null"></td>
+          </tr>
+          <tr class="row26">
+            <td class="column0 style0 s">冬粉</td>
+            <td class="column1 style1 n">33</td>
+            <td class="column2 style0 s">挑選低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row27">
+            <td class="column0 style0 s">菜肉水餃(不同口味平均)</td>
+            <td class="column1 style1 s">40+</td>
+            <td class="column2 style0 s">挑選低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row28">
+            <td class="column0 style0 s">素包(不同口味平均)</td>
+            <td class="column1 style1 s">42+</td>
+            <td class="column2 style0 s">挑選低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row29">
+            <td class="column0 style0 s">菜包,肉包(不同口味平均)</td>
+            <td class="column1 style1 s">42+</td>
+            <td class="column2 style0 s">挑選低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row30">
+            <td class="column0 style0 s">蕎麥麵</td>
+            <td class="column1 style1 n">55</td>
+            <td class="column2 style0 s">挑選低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row31">
+            <td class="column0 style0 s">全麥麵</td>
+            <td class="column1 style1 n">50</td>
+            <td class="column2 style0 s">挑選低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row32">
+            <td class="column0 style0 s">義大利寬扁麵</td>
+            <td class="column1 style1 n">32</td>
+            <td class="column2 style0 s">挑選低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row33">
+            <td class="column0 style0 s">義大利通心麵</td>
+            <td class="column1 style1 s">47+</td>
+            <td class="column2 style0 s">挑選低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row34">
+            <td class="column0 style0 s">全麥義大利麵</td>
+            <td class="column1 style1 s">50+</td>
+            <td class="column2 style0 s">挑選低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row35">
+            <td class="column0 style0 s">義大利麵餃(包肉水煮的Ravioli)</td>
+            <td class="column1 style1 s">40+</td>
+            <td class="column2 style0 s">挑選低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row36">
+            <td class="column0 style19 s">傳統麵線</td>
+            <td class="column1 style20 n">68</td>
+            <td class="column2 style21 s">挑選低GI 值食物,做為平日飲食的變化</td>
+          </tr>
+          <tr class="row37">
+            <td class="column0 style21 s">米粉</td>
+            <td class="column1 style20 s">65+</td>
+            <td class="column2 style21 s">適可而止</td>
+          </tr>
+          <tr class="row38">
+            <td class="column0 style21 s">蔥油餅</td>
+            <td class="column1 style20 s">58Δ</td>
+            <td class="column2 style21 s">油脂含量多,熱量高,盡量少吃或偶而吃</td>
+          </tr>
+          <tr class="row39">
+            <td class="column0 style21 s">烏龍麵</td>
+            <td class="column1 style20 s">58+</td>
+            <td class="column2 style0 s">挑選低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row40">
+            <td class="column0 style12 s">饅頭(鬆軟,不同口味平均)</td>
+            <td class="column1 style16 s">80+</td>
+            <td class="column2 style0 s">挑選低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row41">
+            <td class="column0 style26 s">麵包糕點類</td>
+            <td class="column1 style16 null"></td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row42">
+            <td class="column0 style0 s">全麥玉米薄餅</td>
+            <td class="column1 style1 n">30</td>
+            <td class="column2 style21 s">挑選低GI 值食物,做為平日飲食的變化</td>
+          </tr>
+          <tr class="row43">
+            <td class="column0 style0 s">粗榖粒大麥麵包(含75%榖粒)</td>
+            <td class="column1 style1 n">33</td>
+            <td class="column2 style21 s">挑選低GI 值食物,做為平日飲食的變化</td>
+          </tr>
+          <tr class="row44">
+            <td class="column0 style0 s">全穀粒葡萄乾麵包</td>
+            <td class="column1 style1 n">44</td>
+            <td class="column2 style21 s">挑選低GI 值食物,做為平日飲食的變化</td>
+          </tr>
+          <tr class="row45">
+            <td class="column0 style0 s">粗榖粒大麥麵包(含50%榖粒)</td>
+            <td class="column1 style1 n">48</td>
+            <td class="column2 style21 s">挑選低GI 值食物,做為平日飲食的變化</td>
+          </tr>
+          <tr class="row46">
+            <td class="column0 style0 s">全麥硬麵包(緊實的)</td>
+            <td class="column1 style1 n">51</td>
+            <td class="column2 style21 s">挑選低GI 值食物,做為平日飲食的變化</td>
+          </tr>
+          <tr class="row47">
+            <td class="column0 style0 s">黑麥硬麵包(緊實的)</td>
+            <td class="column1 style1 n">55</td>
+            <td class="column2 style21 s">挑選低GI 值食物,做為平日飲食的變化</td>
+          </tr>
+          <tr class="row48">
+            <td class="column0 style0 s">馬芬</td>
+            <td class="column1 style20 s">46<span style="color:#7030A0; font-family:'新細明體'; font-size:12pt">Δ</span><span style="color:#7030A0; font-family:'新細明體'; font-size:12pt">+</span></td>
+            <td class="column2 style21 s">熱量高,偶而吃, 不可多吃</td>
+          </tr>
+          <tr class="row49">
+            <td class="column0 style0 s">藍莓馬芬</td>
+            <td class="column1 style20 s">55<span style="color:#7030A0; font-family:'新細明體'; font-size:12pt">Δ</span><span style="color:#7030A0; font-family:'新細明體'; font-size:12pt">+</span></td>
+            <td class="column2 style21 s">熱量高,偶而吃, 不可多吃</td>
+          </tr>
+          <tr class="row50">
+            <td class="column0 style0 s">蘋果馬芬</td>
+            <td class="column1 style20 s">50<span style="color:#7030A0; font-family:'新細明體'; font-size:12pt">Δ</span><span style="color:#7030A0; font-family:'新細明體'; font-size:12pt">+</span></td>
+            <td class="column2 style21 s">熱量高,偶而吃, 不可多吃</td>
+          </tr>
+          <tr class="row51">
+            <td class="column0 style13 s">比司吉</td>
+            <td class="column1 style14 s">65Δ</td>
+            <td class="column2 style21 s">挑選低GI 值食物,做為平日飲食的變化</td>
+          </tr>
+          <tr class="row52">
+            <td class="column0 style13 s">中東皮塔餅皮</td>
+            <td class="column1 style14 n">57</td>
+            <td class="column2 style21 s">挑選低GI 值食物,做為平日飲食的變化</td>
+          </tr>
+          <tr class="row53">
+            <td class="column0 style13 s">漢堡麵包</td>
+            <td class="column1 style14 n">62</td>
+            <td class="column2 style21 s">挑選低GI 值食物,做為平日飲食的變化</td>
+          </tr>
+          <tr class="row54">
+            <td class="column0 style13 s">燒餅</td>
+            <td class="column1 style14 n">69</td>
+            <td class="column2 style21 s">挑選低GI 值食物,做為平日飲食的變化</td>
+          </tr>
+          <tr class="row55">
+            <td class="column0 style13 s">香蕉馬芬</td>
+            <td class="column1 style14 s">60Δ+</td>
+            <td class="column2 style21 s">熱量高,偶而吃, 不可多吃</td>
+          </tr>
+          <tr class="row56">
+            <td class="column0 style13 s">磅蛋糕</td>
+            <td class="column1 style14 s">56+</td>
+            <td class="column2 style21 s">熱量高,偶而吃, 不可多吃</td>
+          </tr>
+          <tr class="row57">
+            <td class="column0 style13 s">花生厚片土司</td>
+            <td class="column1 style14 s">60+</td>
+            <td class="column2 style21 s">熱量高,偶而吃, 不可多吃</td>
+          </tr>
+          <tr class="row58">
+            <td class="column0 style13 s">蘇打餅乾</td>
+            <td class="column1 style14 n">65</td>
+            <td class="column2 style21 s">熱量高,偶而吃, 不可多吃</td>
+          </tr>
+          <tr class="row59">
+            <td class="column0 style13 s">海綿蛋糕</td>
+            <td class="column1 style14 n">67</td>
+            <td class="column2 style21 s">熱量高,偶而吃, 不可多吃</td>
+          </tr>
+          <tr class="row60">
+            <td class="column0 style13 s">法國麵包</td>
+            <td class="column1 style14 n">94</td>
+            <td class="column2 style15 s">應挑選低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row61">
+            <td class="column0 style13 s">貝果</td>
+            <td class="column1 style14 n">75</td>
+            <td class="column2 style12 s">應挑選低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row62">
+            <td class="column0 style13 s">甜甜圈</td>
+            <td class="column1 style14 n">86</td>
+            <td class="column2 style12 s">應挑選低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row63">
+            <td class="column0 style13 s">牛角麵包</td>
+            <td class="column1 style14 n">70</td>
+            <td class="column2 style12 s">應挑選低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row64">
+            <td class="column0 style13 s">鬆餅</td>
+            <td class="column1 style14 n">75</td>
+            <td class="column2 style12 s">應挑選低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row65">
+            <td class="column0 style13 s">白吐司</td>
+            <td class="column1 style14 n">80</td>
+            <td class="column2 style12 s">應挑選低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row66">
+            <td class="column0 style13 s">鬆餅(pancake)</td>
+            <td class="column1 style14 s">70+</td>
+            <td class="column2 style12 s">應挑選低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row67">
+            <td class="column0 style12 s">饅頭(鬆軟,不同口味平均)</td>
+            <td class="column1 style16 s">80+</td>
+            <td class="column2 style12 s">應挑選低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row68">
+            <td class="column0 style26 s">魚<span style="color:#000000; font-family:'新細明體'; font-size:12pt">、</span><span style="color:#000000; font-family:'新細明體'; font-size:12pt">肉類</span></td>
+            <td class="column1 style16 null"></td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row69">
+            <td class="column0 style9 s">豬肉</td>
+            <td class="column1 style23 s">Δ※</td>
+            <td class="column2 style18 s">去皮,去油,挑瘦肉吃</td>
+          </tr>
+          <tr class="row70">
+            <td class="column0 style22 s">雞肉</td>
+            <td class="column1 style23 s">Δ※</td>
+            <td class="column2 style18 s">去皮,去油,挑瘦肉吃</td>
+          </tr>
+          <tr class="row71">
+            <td class="column0 style18 s">羊肉</td>
+            <td class="column1 style23 s">Δ※</td>
+            <td class="column2 style18 s">去皮,去油,挑瘦肉吃</td>
+          </tr>
+          <tr class="row72">
+            <td class="column0 style18 s">牛肉</td>
+            <td class="column1 style23 s">Δ※</td>
+            <td class="column2 style18 s">去皮,去油,挑瘦肉吃</td>
+          </tr>
+          <tr class="row73">
+            <td class="column0 style18 s">鴨肉</td>
+            <td class="column1 style23 s">Δ※</td>
+            <td class="column2 style18 s">去皮,去油,挑瘦肉吃</td>
+          </tr>
+          <tr class="row74">
+            <td class="column0 style18 s">火腿</td>
+            <td class="column1 style23 s">Δ※</td>
+            <td class="column2 style18 s">去皮,去油,挑瘦肉吃</td>
+          </tr>
+          <tr class="row75">
+            <td class="column0 style18 s">培根</td>
+            <td class="column1 style23 s">Δ※</td>
+            <td class="column2 style18 s">去皮,去油,挑瘦肉吃</td>
+          </tr>
+          <tr class="row76">
+            <td class="column0 style18 s">鮪魚</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style18 s">含優質蛋白質,是很好的選擇</td>
+          </tr>
+          <tr class="row77">
+            <td class="column0 style18 s">鮭魚</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style18 s">含優質蛋白質,是很好的選擇</td>
+          </tr>
+          <tr class="row78">
+            <td class="column0 style18 s">旗魚</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style18 s">含優質蛋白質,是很好的選擇</td>
+          </tr>
+          <tr class="row79">
+            <td class="column0 style18 s">鱈魚</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style18 s">含優質蛋白質,是很好的選擇</td>
+          </tr>
+          <tr class="row80">
+            <td class="column0 style18 s">沙丁魚</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style18 s">含優質蛋白質,是很好的選擇</td>
+          </tr>
+          <tr class="row81">
+            <td class="column0 style18 s">吻仔魚</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style18 s">含優質蛋白質,是很好的選擇</td>
+          </tr>
+          <tr class="row82">
+            <td class="column0 style18 s">鯛魚</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style18 s">含優質蛋白質,是很好的選擇</td>
+          </tr>
+          <tr class="row83">
+            <td class="column0 style18 s">吳郭魚</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style18 s">含優質蛋白質,是很好的選擇</td>
+          </tr>
+          <tr class="row84">
+            <td class="column0 style12 s">葛礪</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style18 s">可偶而挑選幾種取代魚肉類,做為飲食的變化</td>
+          </tr>
+          <tr class="row85">
+            <td class="column0 style18 s">干貝</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style18 s">可偶而挑選幾種取代魚肉類,做為飲食的變化</td>
+          </tr>
+          <tr class="row86">
+            <td class="column0 style18 s">蜆</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style18 s">可偶而挑選幾種取代魚肉類,做為飲食的變化</td>
+          </tr>
+          <tr class="row87">
+            <td class="column0 style18 s">蝦</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style18 s">可偶而挑選幾種取代魚肉類,做為飲食的變化</td>
+          </tr>
+          <tr class="row88">
+            <td class="column0 style18 s">螃蟹</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style18 s">可偶而挑選幾種取代魚肉類,做為飲食的變化</td>
+          </tr>
+          <tr class="row89">
+            <td class="column0 style18 s">花枝(魷魚,小卷,軟絲,透抽,章魚)</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style18 s">可偶而挑選幾種取代魚肉類,做為飲食的變化</td>
+          </tr>
+          <tr class="row90">
+            <td class="column0 style18 s">牡蠣</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style18 s">可偶而挑選幾種取代魚肉類,做為飲食的變化</td>
+          </tr>
+          <tr class="row91">
+            <td class="column0 style18 s">炸雞(裹粉)</td>
+            <td class="column1 style23 s">45※</td>
+            <td class="column2 style18 s">油炸食物,不可多吃</td>
+          </tr>
+          <tr class="row92">
+            <td class="column0 style18 s">炸魚(裹粉)</td>
+            <td class="column1 style23 s">40※</td>
+            <td class="column2 style18 s">油炸食物,不可多吃</td>
+          </tr>
+          <tr class="row93">
+            <td class="column0 style18 s">魚鬆(無糖調味)</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style18 s">可偶而吃,但最好吃新鮮的魚</td>
+          </tr>
+          <tr class="row94">
+            <td class="column0 style18 s">豬肉鬆(無糖調味)</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style18 s">可偶而吃,但最好吃新鮮的瘦豬肉</td>
+          </tr>
+          <tr class="row95">
+            <td class="column0 style26 s">蔬菜<span style="color:#000000; font-family:'新細明體'; font-size:12pt">類</span></td>
+            <td class="column1 style16 null"></td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row96">
+            <td class="column0 style18 s">芋頭</td>
+            <td class="column1 style23 n">55</td>
+            <td class="column2 style18 s">不錯的選擇,注意攝取量</td>
+          </tr>
+          <tr class="row97">
+            <td class="column0 style18 s">地瓜(水煮)</td>
+            <td class="column1 style17 s">50+</td>
+            <td class="column2 style18 s">不錯的選擇,注意攝取量</td>
+          </tr>
+          <tr class="row98">
+            <td class="column0 style18 s">紅蘿蔔</td>
+            <td class="column1 style17 s">47+</td>
+            <td class="column2 style18 s">天然營養的優質低GI值食物,注意攝取量</td>
+          </tr>
+          <tr class="row99">
+            <td class="column0 style18 s">甜玉米</td>
+            <td class="column1 style17 n">53</td>
+            <td class="column2 style18 s">天然營養的優質低GI值食物,注意攝取量</td>
+          </tr>
+          <tr class="row100">
+            <td class="column0 style18 s">甜玉米(罐頭)</td>
+            <td class="column1 style23 n">46</td>
+            <td class="column2 style18 s">天然營養的優質低GI值食物,注意攝取量</td>
+          </tr>
+          <tr class="row101">
+            <td class="column0 style18 s">蔬菜類(有列出者除外)</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style18 s">每天可食用的優質營養食物</td>
+          </tr>
+          <tr class="row102">
+            <td class="column0 style12 s">馬鈴薯(水煮)</td>
+            <td class="column1 style24 s">80+</td>
+            <td class="column2 style12 s">不要多吃</td>
+          </tr>
+          <tr class="row103">
+            <td class="column0 style12 s">馬鈴薯泥</td>
+            <td class="column1 style24 s">90+</td>
+            <td class="column2 style12 s">不要多吃</td>
+          </tr>
+          <tr class="row104">
+            <td class="column0 style12 s">馬鈴薯(烤)</td>
+            <td class="column1 style16 s">88+</td>
+            <td class="column2 style12 s">不要多吃</td>
+          </tr>
+          <tr class="row105">
+            <td class="column0 style12 s">南瓜</td>
+            <td class="column1 style16 n">75</td>
+            <td class="column2 style12 s">只能偶而吃,但不能多</td>
+          </tr>
+          <tr class="row106">
+            <td class="column0 style12 s">甜菜</td>
+            <td class="column1 style16 n">70</td>
+            <td class="column2 style12 s">偶而吃一點點,但不可多吃</td>
+          </tr>
+          <tr class="row107">
+            <td class="column0 style26 s">芽菜類</td>
+            <td class="column1 style16 null"></td>
+            <td class="column2 style12 null"></td>
+          </tr>
+          <tr class="row108">
+            <td class="column0 style18 s">苜蓿芽</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style18 s">每天可食用的優質營養食物</td>
+          </tr>
+          <tr class="row109">
+            <td class="column0 style18 s">綠豆芽</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style18 s">每天可食用的優質營養食物</td>
+          </tr>
+          <tr class="row110">
+            <td class="column0 style18 s">黃豆芽</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style18 s">每天可食用的優質營養食物</td>
+          </tr>
+          <tr class="row111">
+            <td class="column0 style26 s">豆類&amp;豆製品</td>
+            <td class="column1 style17 null"></td>
+            <td class="column2 style18 null"></td>
+          </tr>
+          <tr class="row112">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row113">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row114">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row115">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row116">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row117">
+            <td class="column0 style22 null"></td>
+            <td class="column1 style25 null"></td>
+            <td class="column2 style22 null"></td>
+          </tr>
+          <tr class="row118">
+            <td class="column0 style22 null"></td>
+            <td class="column1 style25 null"></td>
+            <td class="column2 style22 null"></td>
+          </tr>
+          <tr class="row119">
+            <td class="column0 style18 null"></td>
+            <td class="column1 style17 null"></td>
+            <td class="column2 style18 null"></td>
+          </tr>
+          <tr class="row120">
+            <td class="column0 style26 s">香辛料類</td>
+            <td class="column1 style17 null"></td>
+            <td class="column2 style18 null"></td>
+          </tr>
+          <tr class="row121">
+            <td class="column0 style0 s">蒜頭</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style0 s">天然香辛料使用量不多, 依個人需求酌量使用</td>
+          </tr>
+          <tr class="row122">
+            <td class="column0 style0 s">蔥</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style0 s">天然香辛料使用量不多, 依個人需求酌量使用</td>
+          </tr>
+          <tr class="row123">
+            <td class="column0 style0 s">青蒜</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style0 s">天然香辛料使用量不多, 依個人需求酌量使用</td>
+          </tr>
+          <tr class="row124">
+            <td class="column0 style0 s">辣椒</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style0 s">天然香辛料使用量不多, 依個人需求酌量使用</td>
+          </tr>
+          <tr class="row125">
+            <td class="column0 style0 s">九層塔</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style0 s">天然香辛料使用量不多, 依個人需求酌量使用</td>
+          </tr>
+          <tr class="row126">
+            <td class="column0 style0 s">咖哩粉</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style0 s">天然香辛料使用量不多, 依個人需求酌量使用</td>
+          </tr>
+          <tr class="row127">
+            <td class="column0 style0 s">巴西里</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style0 s">天然香辛料使用量不多, 依個人需求酌量使用</td>
+          </tr>
+          <tr class="row128">
+            <td class="column0 style0 s">薑黃粉</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style0 s">天然香辛料使用量不多, 依個人需求酌量使用</td>
+          </tr>
+          <tr class="row129">
+            <td class="column0 style0 s">香樁粉</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style0 s">天然香辛料使用量不多, 依個人需求酌量使用</td>
+          </tr>
+          <tr class="row130">
+            <td class="column0 style26 s">海藻類</td>
+            <td class="column1 style17 null"></td>
+            <td class="column2 style18 null"></td>
+          </tr>
+          <tr class="row131">
+            <td class="column0 style0 s">海帶</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style0 s">每天可食用, 優質營養品</td>
+          </tr>
+          <tr class="row132">
+            <td class="column0 style0 s">海菜(指新鮮海菜)</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style0 s">每天可食用, 優質營養品</td>
+          </tr>
+          <tr class="row133">
+            <td class="column0 style0 s">紫菜</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style0 s">每天可食用, 優質營養品</td>
+          </tr>
+          <tr class="row134">
+            <td class="column0 style0 s">海苔</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style0 s">每天可食用, 優質營養品</td>
+          </tr>
+          <tr class="row135">
+            <td class="column0 style0 s">海帶芽</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style0 s">每天可食用, 優質營養品</td>
+          </tr>
+          <tr class="row136">
+            <td class="column0 style26 s">菇蕈類</td>
+            <td class="column1 style17 null"></td>
+            <td class="column2 style18 null"></td>
+          </tr>
+          <tr class="row137">
+            <td class="column0 style0 s">木耳</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style0 s">天然營養的優質低GI值食物</td>
+          </tr>
+          <tr class="row138">
+            <td class="column0 style0 s">香菇</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style0 s">天然營養的優質低GI值食物</td>
+          </tr>
+          <tr class="row139">
+            <td class="column0 style0 s">金針菇</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style0 s">天然營養的優質低GI值食物</td>
+          </tr>
+          <tr class="row140">
+            <td class="column0 style0 s">鮑魚菇</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style0 s">天然營養的優質低GI值食物</td>
+          </tr>
+          <tr class="row141">
+            <td class="column0 style0 s">磨菇</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style0 s">天然營養的優質低GI值食物</td>
+          </tr>
+          <tr class="row142">
+            <td class="column0 style0 s">洋菇</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style0 s">天然營養的優質低GI值食物</td>
+          </tr>
+          <tr class="row143">
+            <td class="column0 style0 s">草菇</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style0 s">天然營養的優質低GI值食物</td>
+          </tr>
+          <tr class="row144">
+            <td class="column0 style0 s">杏鮑菇</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style0 s">天然營養的優質低GI值食物</td>
+          </tr>
+          <tr class="row145">
+            <td class="column0 style0 s">白木耳</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style0 s">天然營養的優質低GI值食物</td>
+          </tr>
+          <tr class="row146">
+            <td class="column0 style0 s">黑木耳</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style0 s">天然營養的優質低GI值食物</td>
+          </tr>
+          <tr class="row147">
+            <td class="column0 style0 s">美白菇</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style0 s">天然營養的優質低GI值食物</td>
+          </tr>
+          <tr class="row148">
+            <td class="column0 style0 s">珊瑚菇</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style0 s">天然營養的優質低GI值食物</td>
+          </tr>
+          <tr class="row149">
+            <td class="column0 style0 s">鴻喜菇</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style0 s">天然營養的優質低GI值食物</td>
+          </tr>
+          <tr class="row150">
+            <td class="column0 style0 s">乾香菇</td>
+            <td class="column1 style23 s">※</td>
+            <td class="column2 style0 s">天然營養的優質低GI值食物</td>
+          </tr>
+          <tr class="row151">
+            <td class="column0 style26 s">水果類</td>
+            <td class="column1 style17 null"></td>
+            <td class="column2 style18 null"></td>
+          </tr>
+          <tr class="row152">
+            <td class="column0 style0 s">奇異果</td>
+            <td class="column1 style1 n">53</td>
+            <td class="column2 style0 s">天然營養的優質低GI值食物, 兩餐間很好的充飢食物,但注意攝取量</td>
+          </tr>
+          <tr class="row153">
+            <td class="column0 style0 s">葡萄柚</td>
+            <td class="column1 style1 n">25</td>
+            <td class="column2 style0 s">天然營養的優質低GI值食物, 兩餐間很好的充飢食物,但注意攝取量</td>
+          </tr>
+          <tr class="row154">
+            <td class="column0 style0 s">葡萄</td>
+            <td class="column1 style1 s">50+</td>
+            <td class="column2 style0 s">天然營養的優質低GI值食物, 兩餐間很好的充飢食物,但注意攝取量</td>
+          </tr>
+          <tr class="row155">
+            <td class="column0 style0 s">西洋梨</td>
+            <td class="column1 style1 n">33</td>
+            <td class="column2 style0 s">天然營養的優質低GI值食物, 兩餐間很好的充飢食物,但注意攝取量</td>
+          </tr>
+          <tr class="row156">
+            <td class="column0 style0 s">梨子</td>
+            <td class="column1 style1 n">39</td>
+            <td class="column2 style0 s">天然營養的優質低GI值食物, 兩餐間很好的充飢食物,但注意攝取量</td>
+          </tr>
+          <tr class="row157">
+            <td class="column0 style0 s">柳橙</td>
+            <td class="column1 style1 s">43+</td>
+            <td class="column2 style0 s">天然營養的優質低GI值食物, 兩餐間很好的充飢食物,但注意攝取量</td>
+          </tr>
+          <tr class="row158">
+            <td class="column0 style0 s">橘子</td>
+            <td class="column1 style1 s">41+</td>
+            <td class="column2 style0 s">天然營養的優質低GI值食物, 兩餐間很好的充飢食物,但注意攝取量</td>
+          </tr>
+          <tr class="row159">
+            <td class="column0 style0 s">草莓</td>
+            <td class="column1 style1 n">40</td>
+            <td class="column2 style0 s">天然營養的優質低GI值食物, 兩餐間很好的充飢食物,但注意攝取量</td>
+          </tr>
+          <tr class="row160">
+            <td class="column0 style0 s">蘋果</td>
+            <td class="column1 style1 s">40+</td>
+            <td class="column2 style0 s">天然營養的優質低GI值食物, 兩餐間很好的充飢食物,但注意攝取量</td>
+          </tr>
+          <tr class="row161">
+            <td class="column0 style0 s">紅柿</td>
+            <td class="column1 style1 n">3</td>
+            <td class="column2 style0 s">天然營養的優質低GI值食物, 兩餐間很好的充飢食物,但注意攝取量</td>
+          </tr>
+          <tr class="row162">
+            <td class="column0 style0 s">李子</td>
+            <td class="column1 style1 n">39</td>
+            <td class="column2 style0 s">天然營養的優質低GI值食物, 兩餐間很好的充飢食物,但注意攝取量</td>
+          </tr>
+          <tr class="row163">
+            <td class="column0 style0 s">桃子</td>
+            <td class="column1 style1 n">55</td>
+            <td class="column2 style0 s">天然營養的優質低GI值食物, 兩餐間很好的充飢食物,但注意攝取量</td>
+          </tr>
+          <tr class="row164">
+            <td class="column0 style0 s">釋迦</td>
+            <td class="column1 style1 n">54</td>
+            <td class="column2 style0 s">天然營養的優質低GI值食物, 兩餐間很好的充飢食物,但注意攝取量</td>
+          </tr>
+          <tr class="row165">
+            <td class="column0 style0 s">櫻桃</td>
+            <td class="column1 style1 n">52</td>
+            <td class="column2 style0 s">不宜吃多</td>
+          </tr>
+          <tr class="row166">
+            <td class="column0 style0 s">香蕉</td>
+            <td class="column1 style1 n">52</td>
+            <td class="column2 style0 s">不要選過熟的,未全熟的GI值較低</td>
+          </tr>
+          <tr class="row167">
+            <td class="column0 style0 s">檸檬</td>
+            <td class="column1 style1 n">-1</td>
+            <td class="column2 style0 s">適量用於食物調味</td>
+          </tr>
+          <tr class="row168">
+            <td class="column0 style0 s">酪梨</td>
+            <td class="column1 style1 n">-1</td>
+            <td class="column2 style0 s">含好的油脂,適可而止</td>
+          </tr>
+          <tr class="row169">
+            <td class="column0 style2 s">香瓜</td>
+            <td class="column1 style3 n">68</td>
+            <td class="column2 style2 s">不宜多吃</td>
+          </tr>
+          <tr class="row170">
+            <td class="column0 style2 s">鳳梨</td>
+            <td class="column1 style3 n">65</td>
+            <td class="column2 style2 s">不宜多吃</td>
+          </tr>
+          <tr class="row171">
+            <td class="column0 style2 s">木瓜</td>
+            <td class="column1 style3 n">59</td>
+            <td class="column2 style2 s">不宜多吃</td>
+          </tr>
+          <tr class="row172">
+            <td class="column0 style2 s">哈密瓜</td>
+            <td class="column1 style3 n">67</td>
+            <td class="column2 style2 s">不宜多吃</td>
+          </tr>
+          <tr class="row173">
+            <td class="column0 style4 s">西瓜</td>
+            <td class="column1 style5 n">72</td>
+            <td class="column2 style4 s">不宜多吃</td>
+          </tr>
+          <tr class="row174">
+            <td class="column0 style26 s">蛋類<span style="color:#000000; font-family:'新細明體'; font-size:12pt">、</span><span style="color:#000000; font-family:'新細明體'; font-size:12pt">乳製品</span></td>
+            <td class="column1 style17 null"></td>
+            <td class="column2 style18 null"></td>
+          </tr>
+          <tr class="row175">
+            <td class="column0 style8 s">蛋</td>
+            <td class="column1 style1 n">-1</td>
+            <td class="column2 style9 s">注意攝取量</td>
+          </tr>
+          <tr class="row176">
+            <td class="column0 style8 s">乳酪片</td>
+            <td class="column1 style1 n">-1</td>
+            <td class="column2 style8 s">熱量高,選擇低脂</td>
+          </tr>
+          <tr class="row177">
+            <td class="column0 style8 s">奶油</td>
+            <td class="column1 style1 n">-1</td>
+            <td class="column2 style0 s">含大量動物油脂,可偶爾吃,但只吃一點</td>
+          </tr>
+          <tr class="row178">
+            <td class="column0 style8 s">鮮奶油</td>
+            <td class="column1 style1 n">-1</td>
+            <td class="column2 style0 s">含大量動物油脂,可偶爾吃,但只吃一點</td>
+          </tr>
+          <tr class="row179">
+            <td class="column0 style8 s">冰淇淋(不同口味平均值)</td>
+            <td class="column1 style1 s">47+</td>
+            <td class="column2 style0 s">熱量高,可偶爾吃,但適可而止</td>
+          </tr>
+          <tr class="row180">
+            <td class="column0 style8 s">全脂巧克力冰淇淋</td>
+            <td class="column1 style1 n">40</td>
+            <td class="column2 style0 s">熱量高,可偶爾吃,但適可而止</td>
+          </tr>
+          <tr class="row181">
+            <td class="column0 style8 s">低脂巧克力冰淇淋</td>
+            <td class="column1 style1 n">48</td>
+            <td class="column2 style0 s">熱量高,可偶爾吃,但適可而止</td>
+          </tr>
+          <tr class="row182">
+            <td class="column0 style8 s">全脂香草冰淇淋</td>
+            <td class="column1 style1 n">46</td>
+            <td class="column2 style0 s">熱量高,可偶爾吃,但適可而止</td>
+          </tr>
+          <tr class="row183">
+            <td class="column0 style8 s">低脂香草冰淇淋</td>
+            <td class="column1 style1 n">40</td>
+            <td class="column2 style0 s">熱量高,可偶爾吃,但適可而止</td>
+          </tr>
+          <tr class="row184">
+            <td class="column0 style8 s">全脂鮮奶</td>
+            <td class="column1 style1 n">27</td>
+            <td class="column2 style0 s">含動物性油脂,建議選擇低脂或脫脂鮮奶</td>
+          </tr>
+          <tr class="row185">
+            <td class="column0 style8 s">低脂鮮奶</td>
+            <td class="column1 style1 n">30</td>
+            <td class="column2 style0 s">含動物性油脂,建議選擇低脂或脫脂鮮奶</td>
+          </tr>
+          <tr class="row186">
+            <td class="column0 style8 s">脫脂鮮奶</td>
+            <td class="column1 style1 n">32</td>
+            <td class="column2 style0 s">好的選擇</td>
+          </tr>
+          <tr class="row187">
+            <td class="column0 style8 s">自製優格(低脂無糖)</td>
+            <td class="column1 style1 n">15</td>
+            <td class="column2 style0 s">非常好的選擇,可每日食用一杯</td>
+          </tr>
+          <tr class="row188">
+            <td class="column0 style8 s">原味優格</td>
+            <td class="column1 style1 n">18</td>
+            <td class="column2 style0 s">不錯的選擇,可每日食用一杯</td>
+          </tr>
+          <tr class="row189">
+            <td class="column0 style8 s">水果優格(不同口味平均值)</td>
+            <td class="column1 style1 s">27+</td>
+            <td class="column2 style0 s">不錯的選擇,可每日食用一杯</td>
+          </tr>
+          <tr class="row190">
+            <td class="column0 style8 s">低脂水果優格(不同口味平均值)</td>
+            <td class="column1 style1 s">40+</td>
+            <td class="column2 style0 s">不錯的選擇,可每日食用一杯</td>
+          </tr>
+          <tr class="row191">
+            <td class="column0 style8 s">香蕉豆奶昔</td>
+            <td class="column1 style1 n">35</td>
+            <td class="column2 style0 s">營養的飲品,注意攝取量</td>
+          </tr>
+          <tr class="row192">
+            <td class="column0 style8 s">豆漿</td>
+            <td class="column1 style1 n">44</td>
+            <td class="column2 style0 s">營養的飲品,注意攝取量</td>
+          </tr>
+          <tr class="row193">
+            <td class="column0 style8 s">香蕉奶昔(無添加糖)</td>
+            <td class="column1 style1 n">31</td>
+            <td class="column2 style0 s">營養的飲品,不錯的選擇,注意攝取量</td>
+          </tr>
+          <tr class="row194">
+            <td class="column0 style8 s">脫脂優酪乳(含糖)</td>
+            <td class="column1 style1 s">45+</td>
+            <td class="column2 style0 s">營養的飲品,不錯的選擇,注意攝取量</td>
+          </tr>
+          <tr class="row195">
+            <td class="column0 style8 s">巧克力慕思</td>
+            <td class="column1 style1 n">39</td>
+            <td class="column2 style0 s">熱量高,不可多喝</td>
+          </tr>
+          <tr class="row196">
+            <td class="column0 style8 s">巧克力牛奶</td>
+            <td class="column1 style1 n">40</td>
+            <td class="column2 style0 s">熱量高,不可多喝</td>
+          </tr>
+          <tr class="row197">
+            <td class="column0 style8 s">低脂巧克力牛奶(含阿斯巴甜)</td>
+            <td class="column1 style1 n">24</td>
+            <td class="column2 style0 s">不錯的選擇,注意攝取量</td>
+          </tr>
+          <tr class="row198">
+            <td class="column0 style6 s">加糖煉乳</td>
+            <td class="column1 style7 n">84</td>
+            <td class="column2 style0 s">不可多吃</td>
+          </tr>
+          <tr class="row199">
+            <td class="column0 style26 s">點心類</td>
+            <td class="column1 style17 null"></td>
+            <td class="column2 style18 null"></td>
+          </tr>
+          <tr class="row200">
+            <td class="column0 style8 s">巧克力(不同商品平均值)</td>
+            <td class="column1 style1 s">50+</td>
+            <td class="column2 style0 s">高熱量,不可多吃</td>
+          </tr>
+          <tr class="row201">
+            <td class="column0 style8 s">牛奶巧克力(DOVE)</td>
+            <td class="column1 style1 n">45</td>
+            <td class="column2 style0 s">高熱量,不可多吃</td>
+          </tr>
+          <tr class="row202">
+            <td class="column0 style8 s">牛奶巧克力(不同商品平均值)</td>
+            <td class="column1 style1 s">40+</td>
+            <td class="column2 style0 s">高熱量,不可多吃</td>
+          </tr>
+          <tr class="row203">
+            <td class="column0 style8 s">巧克力牛奶棒</td>
+            <td class="column1 style1 n">44</td>
+            <td class="column2 style0 s">高熱量,不可多吃</td>
+          </tr>
+          <tr class="row204">
+            <td class="column0 style8 s">龜苓膏(無糖)</td>
+            <td class="column1 style1 n">-1</td>
+            <td class="column2 style0 s">不錯的選擇</td>
+          </tr>
+          <tr class="row205">
+            <td class="column0 style8 s">果凍(無糖)</td>
+            <td class="column1 style1 n">-1</td>
+            <td class="column2 style0 s">不錯的選擇</td>
+          </tr>
+          <tr class="row206">
+            <td class="column0 style8 s">茶凍(無糖)</td>
+            <td class="column1 style1 n">-1</td>
+            <td class="column2 style0 s">低脂的點心,不錯的選擇</td>
+          </tr>
+          <tr class="row207">
+            <td class="column0 style8 s">茶凍(添加少許蔗糖)</td>
+            <td class="column1 style1 n">25</td>
+            <td class="column2 style0 s">低脂的點心</td>
+          </tr>
+          <tr class="row208">
+            <td class="column0 style8 s">蒟蒻</td>
+            <td class="column1 style1 s">10+</td>
+            <td class="column2 style0 s">很好的選擇,</td>
+          </tr>
+          <tr class="row209">
+            <td class="column0 style10 s">棉花糖</td>
+            <td class="column1 style11 s">65+</td>
+            <td class="column2 style0 s">不可多吃</td>
+          </tr>
+          <tr class="row210">
+            <td class="column0 style10 s">洋芋片</td>
+            <td class="column1 style11 s">56+</td>
+            <td class="column2 style0 s">高熱量,不可多吃</td>
+          </tr>
+          <tr class="row211">
+            <td class="column0 style10 s">焦糖布丁</td>
+            <td class="column1 style11 n">60</td>
+            <td class="column2 style0 s">偶而吃一點,但不可多吃</td>
+          </tr>
+          <tr class="row212">
+            <td class="column0 style6 s">麻糬(不同口味平均值)</td>
+            <td class="column1 style7 s">70+</td>
+            <td class="column2 style0 s">偶而吃一點,但不可多吃</td>
+          </tr>
+          <tr class="row213">
+            <td class="column0 style6 s">墨西哥玉米片</td>
+            <td class="column1 style7 n">70</td>
+            <td class="column2 style0 s">高熱量,不可多吃</td>
+          </tr>
+          <tr class="row214">
+            <td class="column0 style6 s">爆米花</td>
+            <td class="column1 style7 s">72+</td>
+            <td class="column2 style0 s">高熱量,不可多吃</td>
+          </tr>
+          <tr class="row215">
+            <td class="column0 style6 s">仙貝</td>
+            <td class="column1 style7 n">91</td>
+            <td class="column2 style0 s">高熱量,不可多吃</td>
+          </tr>
+          <tr class="row216">
+            <td class="column0 style26 s">飲料類</td>
+            <td class="column1 style17 null"></td>
+            <td class="column2 style18 null"></td>
+          </tr>
+          <tr class="row217">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row218">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row219">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row220">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row221">
+            <td class="column0 style26 s">堅果類</td>
+            <td class="column1 style17 null"></td>
+            <td class="column2 style18 null"></td>
+          </tr>
+          <tr class="row222">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row223">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row224">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row225">
+            <td class="column0 style26 s">外食類</td>
+            <td class="column1 style17 null"></td>
+            <td class="column2 style18 null"></td>
+          </tr>
+          <tr class="row226">
+            <td class="column0 style0 s">小籠包</td>
+            <td class="column1 style1 n">39</td>
+            <td class="column2 style0 s">改</td>
+          </tr>
+          <tr class="row227">
+            <td class="column0 style0 s">菜肉水餃(不同口味平均)</td>
+            <td class="column1 style1 s">40+</td>
+            <td class="column2 style0 s">挑選低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row228">
+            <td class="column0 style0 s">素水餃(不同口味平均)</td>
+            <td class="column1 style1 n">42</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row229">
+            <td class="column0 style0 s">菜包,肉包(不同口味平均)</td>
+            <td class="column1 style1 n">42</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row230">
+            <td class="column0 style0 s">蔬菜披薩</td>
+            <td class="column1 style1 n">50</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row231">
+            <td class="column0 style0 s">鮭魚壽司</td>
+            <td class="column1 style1 n">50</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row232">
+            <td class="column0 style0 s">義大利蔬菜湯</td>
+            <td class="column1 style1 n">50</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row233">
+            <td class="column0 style0 s">潛水堡三明治</td>
+            <td class="column1 style1 n">50</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row234">
+            <td class="column0 style0 s">麥克雞塊</td>
+            <td class="column1 style1 n">45</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row235">
+            <td class="column0 style0 s">義大利麵</td>
+            <td class="column1 style1 n">60</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row236">
+            <td class="column0 style0 s">炒米粉</td>
+            <td class="column1 style1 n">63</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row237">
+            <td class="column0 style0 s">雞肉漢堡</td>
+            <td class="column1 style1 n">58</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row238">
+            <td class="column0 style0 s">豬肉漢堡</td>
+            <td class="column1 style1 n">66</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row239">
+            <td class="column0 style0 s">魚排漢堡</td>
+            <td class="column1 style1 n">66</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row240">
+            <td class="column0 style0 s">玉米濃湯</td>
+            <td class="column1 style1 n">70</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row241">
+            <td class="column0 style0 s">炒麵</td>
+            <td class="column1 style1 n">80</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row242">
+            <td class="column0 style0 s">炒飯</td>
+            <td class="column1 style1 n">90</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row243">
+            <td class="column0 style0 s">粉圓</td>
+            <td class="column1 style1 n">80</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row244">
+            <td class="column0 style0 s">糯米雞</td>
+            <td class="column1 style1 n">86</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row245">
+            <td class="column0 style0 s">蚵仔麵線</td>
+            <td class="column1 style1 n">85</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row246">
+            <td class="column0 style0 s">米粉湯</td>
+            <td class="column1 style1 n">70</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row247">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row248">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row249">
+            <td class="column0 style0 s">南瓜</td>
+            <td class="column1 style1 n">75</td>
+            <td class="column2 style0 s">挑選低GI 值食物,做為平日主食</td>
+          </tr>
+          <tr class="row250">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+          </tr>
+          <tr class="row251">
+            <td class="column0 style26 s">果醬<span style="color:#000000; font-family:'新細明體'; font-size:12pt">、</span><span style="color:#000000; font-family:'新細明體'; font-size:12pt">果乾、罐頭類</span></td>
+            <td class="column1 style17 null"></td>
+            <td class="column2 style18 null"></td>
+          </tr>
+        </tbody>
+    </table>
+  </body>
+</html>
